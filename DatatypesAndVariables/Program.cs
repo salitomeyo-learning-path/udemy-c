@@ -76,6 +76,32 @@ namespace DatatypesAndVariables
                 Console.WriteLine("When we copy the reference type it just copies the memory address of the data so we will then have two variables pointing at the same data");
             }
         }
+
+        public class ConsoleClass
+        {
+            public void consoleClassMethods()
+            {
+                // Prints and keeps the cursor on the next line
+                Console.WriteLine("this is a line with line break");
+
+                // Prints and keeps the cursor on the same line
+                Console.Write("this is a line ");
+                Console.Write("without line break");
+
+                // Takes a string or integer input and returns its value
+                Console.Write("Enter value to get value: ");
+                string inputValue = Console.ReadLine();
+                Console.WriteLine("Value is {0}", inputValue);
+
+                // Takes a single input of type string and returns its ASCII value
+                Console.Write("Enter value to get ASCII: ");
+                int asciiValue = Console.Read();
+                Console.WriteLine("ASCII value is {0}", asciiValue);
+
+                // Takes a single input of type string and returns its key info
+                Console.ReadKey();
+            }
+        }
         static void Main(string[] args)
         {
             NumberVariables numbers = new NumberVariables();
@@ -86,6 +112,9 @@ namespace DatatypesAndVariables
 
             ValueTypeAndReferenceType types = new ValueTypeAndReferenceType();
             types.valueVSReference();
+
+            ConsoleClass console = new ConsoleClass();
+            console.consoleClassMethods();
 
             Console.Read();
         }
