@@ -52,6 +52,25 @@ namespace DatatypesAndVariables
                 Console.WriteLine(lowerMessage);
             }
         }
+
+        public class ValueTypeAndReferenceType
+        {
+            public void valueVSReference()
+            {
+                //Data types categorize in two groups based on how they occupy memory location
+                Console.WriteLine("VALUE TYPE");
+                Console.WriteLine("Store actual data directly");
+                Console.WriteLine("Include int, float, long, double, char, bool, decimal, struct, enum");
+                Console.WriteLine("Nullable versions available (we can use int?, double?, etc)");
+                Console.WriteLine("Can be stored in heap if part of a reference type");
+
+                Console.WriteLine("REFERENCE TYPE");
+                Console.WriteLine("Stores the memory location of the actual data");
+                Console.WriteLine("Stores the memory reference of the data and not the data itself");
+                Console.WriteLine("Includes string, classes, arrays, etc");
+                Console.WriteLine("When we copy the reference type it just copies the memory address of the data so we will then have two variables pointing at the same data");
+            }
+        }
         static void Main(string[] args)
         {
             NumberVariables numbers = new NumberVariables();
@@ -59,6 +78,9 @@ namespace DatatypesAndVariables
 
             Strings strings = new Strings();
             strings.manipulatingStrings();
+
+            ValueTypeAndReferenceType types = new ValueTypeAndReferenceType();
+            types.valueVSReference();
 
             Console.Read();
         }
