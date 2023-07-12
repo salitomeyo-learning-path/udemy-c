@@ -102,6 +102,17 @@ namespace DatatypesAndVariables
                 Console.ReadKey();
             }
         }
+        // class names should follow pascal which means like AnyClassName and are usually nouns
+        public class NamingConventions
+        {
+            // method names should follow pascal which means like AnyMethodName
+            // method argument names should follow camel case which means like anyArgumentName
+            public void MethodName(int numberVariable)
+            {
+                // variable names should follow camel case which means like anyVariableName
+                string variableName = "String";
+            }
+        }
         static void Main(string[] args)
         {
             NumberVariables numbers = new NumberVariables();
