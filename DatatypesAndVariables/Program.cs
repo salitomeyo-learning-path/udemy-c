@@ -6,10 +6,13 @@ namespace DatatypesAndVariables
     {
         class NumberVariables
         {
+            /// <summary>
+            /// We use summary on top of a method to create a description developers will be able to see when hovering over the method
+            /// </summary>
             public void typesOfNumberVariables()
             {
                 int number1;
-                number1 = 1;
+                number1 = 1 ;
 
                 int number2 = 2;
                 int sum = number1 + number2;
@@ -36,7 +39,9 @@ namespace DatatypesAndVariables
                 Console.WriteLine("d1/number2 is " + dobIntDiv);
             }
         }
-
+        /// <summary>
+        /// We use a shortcut for writing the summary sintax just by putting 3 / on top of a method, and our editor will autocomplete
+        /// </summary>
         public class Strings
         {
             public void manipulatingStrings()
