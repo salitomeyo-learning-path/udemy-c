@@ -86,6 +86,12 @@ namespace DatatypesVariables
                 Console.WriteLine(fullName.Trim());
                 Console.WriteLine(firstName.IndexOf('r'));
                 Console.WriteLine(String.IsNullOrWhiteSpace(firstName));
+
+                //To use special characters inside a string we just have to put a \ before said character
+                Console.WriteLine("Some phrase with \"Quotation marks\" and others like \n to insert line break");
+                //Use String.Format to save string formatting in variables
+                string formatMessage = String.Format("Hello, my name is {0}, and my last name is {1}", firstName, lastName);
+                Console.WriteLine(formatMessage);
             }
         }
 
