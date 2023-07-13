@@ -43,9 +43,9 @@ namespace DatatypesVariables
         /// <summary>
         /// We use a shortcut for writing the summary sintax just by putting 3 / on top of a method, and our editor will autocomplete
         /// </summary>
-        public class Strings
+        public class StringClass
         {
-            public void manipulatingStrings()
+            public void ManipulatingStrings()
             {
                 string myName = "Salome";
                 string message = "My name is " + myName;
@@ -72,6 +72,20 @@ namespace DatatypesVariables
 
                 Nulla accumsan sapien non tellus fringilla, id congue velit auctor. Aliquam vitae odio efficitur, tempus orci non, ornare arcu. 
                 Mauris porta elementum ipsum sagittis fringilla. Mauris at tincidunt tellus.");
+            }
+
+            public void StringFunctions()
+            {
+                string firstName = "Clark";
+                string lastName = "Kent";
+                string fullName = string.Concat(" ", firstName, lastName, " ");
+                Console.WriteLine(fullName);
+                Console.WriteLine(firstName.Substring(2));
+                Console.WriteLine(firstName.ToLower());
+                Console.WriteLine(firstName.ToUpper());
+                Console.WriteLine(fullName.Trim());
+                Console.WriteLine(firstName.IndexOf('r'));
+                Console.WriteLine(String.IsNullOrWhiteSpace(firstName));
             }
         }
 
@@ -170,20 +184,21 @@ namespace DatatypesVariables
 
         static void Main(string[] args)
         {
-            NumberVariables numbers = new NumberVariables();
-            numbers.typesOfNumberVariables();
+            //NumberVariables numbers = new NumberVariables();
+            //numbers.typesOfNumberVariables();
 
-            Strings strings = new Strings();
-            strings.manipulatingStrings();
+            StringClass strings = new StringClass();
+            strings.ManipulatingStrings();
+            strings.StringFunctions();
 
-            ValueTypeAndReferenceType types = new ValueTypeAndReferenceType();
-            types.valueVSReference();
+            //ValueTypeAndReferenceType types = new ValueTypeAndReferenceType();
+            //types.valueVSReference();
 
-            ConsoleClass console = new ConsoleClass();
-            console.consoleClassMethods();
+            //ConsoleClass console = new ConsoleClass();
+            //console.consoleClassMethods();
 
-            ImplicitExplicitConversion conversion = new ImplicitExplicitConversion();
-            conversion.Conversions();
+            //ImplicitExplicitConversion conversion = new ImplicitExplicitConversion();
+            //conversion.Conversions();
 
             Console.Read();
         }
