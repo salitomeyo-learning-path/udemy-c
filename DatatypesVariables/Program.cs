@@ -139,6 +139,15 @@ namespace DatatypesVariables
                 string myString = myDouble.ToString();
                 Console.WriteLine(myString);
 
+                //Parsing variables
+                string stringForFloat = "0.85";
+                string stringFotInt = "12345";
+
+                float floatFromString = float.Parse(stringForFloat);
+                int intFromString = int.Parse(stringFotInt);
+                Console.WriteLine(floatFromString);
+                Console.WriteLine(intFromString);
+
             }
         }
 
@@ -159,6 +168,8 @@ namespace DatatypesVariables
 
             ImplicitExplicitConversion conversion = new ImplicitExplicitConversion();
             conversion.Conversions();
+
+            Console.Read();
         }
     }
 }
