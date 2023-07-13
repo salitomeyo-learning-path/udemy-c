@@ -56,6 +56,22 @@ namespace DatatypesVariables
 
                 string lowerMessage = message.ToLower();
                 Console.WriteLine(lowerMessage);
+
+                int age = 543;
+                Console.WriteLine("String Concatenation");
+                Console.WriteLine(message + ", I am " + age + " years old");
+
+                Console.WriteLine("String Formatting");
+                Console.WriteLine("Hello, my name is {0}, I am {1} years old", myName, age);
+
+                Console.WriteLine("String Interpolation");
+                Console.WriteLine($"Hello, my name is {myName}, I am {age} years old");
+
+                Console.WriteLine("String Verbatim");
+                Console.WriteLine(@"Mauris molestie condimentum est, eu tincidunt nunc consequat eu. Morbi iaculis nec dui at pellentesque. Curabitur commodo urna enim, sit amet sollicitudin erat porta sit amet. Etiam vitae ante in sapien pellentesque accumsan tristique a nisi. Sed pretium eu nibh in lacinia. Curabitur et nunc sed sapien imperdiet volutpat. Fusce eget blandit massa. Nullam a tempor ex.
+
+                Nulla accumsan sapien non tellus fringilla, id congue velit auctor. Aliquam vitae odio efficitur, tempus orci non, ornare arcu. 
+                Mauris porta elementum ipsum sagittis fringilla. Mauris at tincidunt tellus.");
             }
         }
 
