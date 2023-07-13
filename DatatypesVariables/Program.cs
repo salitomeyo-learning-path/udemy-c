@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace DatatypesAndVariables
+namespace DatatypesVariables
 {
     class Program
     {
-        class NumberVariables
+        public class NumberVariables
         {
             /// <summary>
             /// We use summary on top of a method to create a description developers will be able to see when hovering over the method
@@ -12,7 +12,7 @@ namespace DatatypesAndVariables
             public void typesOfNumberVariables()
             {
                 int number1;
-                number1 = 1 ;
+                number1 = 1;
 
                 int number2 = 2;
                 int sum = number1 + number2;
@@ -39,6 +39,7 @@ namespace DatatypesAndVariables
                 Console.WriteLine("d1/number2 is " + dobIntDiv);
             }
         }
+
         /// <summary>
         /// We use a shortcut for writing the summary sintax just by putting 3 / on top of a method, and our editor will autocomplete
         /// </summary>
@@ -102,6 +103,7 @@ namespace DatatypesAndVariables
                 Console.ReadKey();
             }
         }
+
         // class names should follow pascal which means like AnyClassName and are usually nouns
         public class NamingConventions
         {
@@ -113,6 +115,34 @@ namespace DatatypesAndVariables
                 string variableName = "String";
             }
         }
+
+        public class ImplicitExplicitConversion
+        {
+            public void Conversions()
+            {
+                //Implicit conversion
+                int numb = 32340329;
+                long bigNumb = numb;
+                Console.WriteLine(bigNumb);
+
+                float myFloat = 32.76f;
+                double myNewDouble = myFloat;
+                Console.WriteLine(myNewDouble);
+
+                //Explicit conversion
+                double myDouble = 12.432;
+                int myInt;
+                myInt = (int)myDouble;
+                Console.WriteLine(myInt);
+
+                //Type conversion
+                string myString = myDouble.ToString();
+                Console.WriteLine(myString);
+
+            }
+        }
+
+
         static void Main(string[] args)
         {
             NumberVariables numbers = new NumberVariables();
@@ -127,7 +157,8 @@ namespace DatatypesAndVariables
             ConsoleClass console = new ConsoleClass();
             console.consoleClassMethods();
 
-            Console.Read();
+            ImplicitExplicitConversion conversion = new ImplicitExplicitConversion();
+            conversion.Conversions();
         }
     }
 }
